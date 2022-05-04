@@ -56,6 +56,8 @@ export default {
     height: 200px;
     display: flex;
     align-items: center;
+    position: relative;
+    z-index: 1;
 }
 .iconsContainer {
     width: 70%;

@@ -150,10 +150,15 @@ export default {
     background-image: url("../assets/images/footer-bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    overflow: hidden;
+    position: relative;
     img {
         position: absolute;
-        right: 20%;
-        top: 35%;
+        right: 0%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        height: 540px;
+        z-index: 0;
     }
 }
 .footerTopContainer {

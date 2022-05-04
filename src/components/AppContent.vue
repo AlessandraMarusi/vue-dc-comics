@@ -20,8 +20,9 @@ export default {
 @import '../style/generals';
 div {
     background-color: $bgColor;
-    height: 100px;
+    height: 150px;
     width: 100%;
+    margin-top: 120px;
 }
 .contentContainer {
     width: 70%;
