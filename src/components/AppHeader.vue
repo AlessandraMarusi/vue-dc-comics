@@ -2,11 +2,9 @@
     <header>
         <div class="headerContainer">
             <div class="logoContainer"><img src="../assets/images/dc-logo.png" alt="Logo DC"></div>
-            <nav>
-                <ul>
-                    <li v-for="(item, index) in navItems" :key="index" :class="{active: item.active}">{{item.text}}</li>
-                </ul>
-            </nav>
+        <ul>
+            <li v-for="(item, index) in navItems" :key="index" :class="{active: item.active}">{{item.text}}</li>
+        </ul>
         </div>
     </header>
 </template>
@@ -64,6 +62,7 @@ export default {
     msg: String
   }
 }
+
 </script>
 
 <style lang="scss" scoped>
@@ -88,17 +87,22 @@ img {
     height: 80px;
 }
 ul {
+    height: 100%;
     display: flex;
     justify-content: center;
     gap: 5%;
     list-style: none;
 }
 li {
+    line-height: 125px;
+    height: 100%;
     text-transform: uppercase;
     cursor: pointer;
 }
 .active {
-    color: $mainColor,
+    color: $mainColor;
+    border-bottom: 4px solid $mainColor;
+    /* box-shadow: 0px 43px 0px 0px white, 0px 50px 0px 0px $mainColor; */
 }
 
 </style>
