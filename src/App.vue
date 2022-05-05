@@ -2,7 +2,8 @@
   <div id="app">
     <app-header/>
     <main>
-      <app-content/>
+      <app-jumbotron/>
+      <app-grid/>
       <app-icon-bar/>
     </main>
     <footer>
@@ -14,11 +15,12 @@
 </template>
 
 <script>
-import AppContent from './components/AppContent.vue'
 import AppFooterBottom from './components/AppFooterBottom.vue'
 import AppFooterTop from './components/AppFooterTop.vue'
+import AppGrid from './components/AppGrid.vue'
 import AppHeader from './components/AppHeader.vue'
 import AppIconBar from './components/AppIconBar.vue'
+import AppJumbotron from './components/AppJumbotron.vue'
 
 
 export default {
@@ -26,9 +28,10 @@ export default {
   components: {
     AppHeader,
     AppFooterTop,
-    AppContent,
     AppFooterBottom,
-    AppIconBar
+    AppIconBar,
+    AppJumbotron,
+    AppGrid
 
   }
 }
