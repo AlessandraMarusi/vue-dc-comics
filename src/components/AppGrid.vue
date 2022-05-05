@@ -1,5 +1,18 @@
 <template>
-    <div><h2>Grid</h2></div>
+    <section id="grid">
+        <div class="gridTitle"><h2>Current series</h2></div>
+        <div class="gridContainer">
+            <ul>
+                <li v-for="(item, index) in productItems" :key="index">
+                    <div class="coverImg">
+                        <img :src="item.thumb" :alt="'Copertiva di' + item.series">
+                    </div>
+                    <span>{{item.series}}</span>
+                </li>
+            </ul>
+            <button>Load more</button>
+        </div>
+    </section>
 </template>
 
 <script>
@@ -90,5 +103,60 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+@import '../style/generals';
+@import '../style/variables';
+#grid {
+    background-color: $bgColor;
+    padding: 20px 0;
+    position: relative;
+}
+.gridContainer {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    ul{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin: 30px 0;
+        li {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            img {
+                width: 150px;
+            }
+            span {
+                width: 150px;
+                color: white;
+                text-transform: uppercase;
+                font-size: 0.7rem;
+                padding-top: 10px;
+            }
+        }
+    }
+    button {
+        color: white;
+        background-color: $mainColor;
+        border: none;
+        cursor: pointer;
+        padding: 10px 30px;
+    }
+}
+.gridTitle {
+    position: absolute;
+    top: -20px;
+    left: 20%;
+    background-color: $mainColor;
+    color: white;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    font-size: 0.8rem;
+}
+.coverImg {
+    height: 150px;
+    width: 150px;
+    overflow: hidden;
+}
 </style>
